@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AddStyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class= bg-black text-white>>
+
+    <!-- Título en la parte superior -->
+    <header class="bg-pink-950 p-4 text-center">
+        <a href="index.html"><h1 class="text-4xl font-bold">Oasis</h1></a>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-pink-950 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="user-info mb-6">
+                <img src="liamandnoel.jpg" alt="Ícono de la banda" class="w-full rounded-lg mb-4">
+                <h2 class="text-xl font-semibold text-center">LiamAndNoel</h2>
+            </div>
+
+            <!-- Secciones de la sidebar -->
+            <div class="section mb-4">
+                <a href="index.html" class="block py-2 px-4 rounded hover:bg-pink-900">Other Albums</a>
+            </div>
+            <div class="section mb-4">
+                <a href="EditAlbum.html" class="block py-2 px-4 rounded hover:bg-purple-600">Edit Album</a>
+            </div>
+            <div class="section mb-4">
+                <a href="AddSongs.html" class="block py-2 px-4 rounded hover:bg-purple-600">Add Songs</a>
+            </div>
+            <div class="section mb-4">
+                <a href="Login.html" class="block py-2 px-4 rounded hover:bg-purple-600">Log out</a>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="bg-pink-950 p-6 rounded-lg shadow-lg max-w-lg w-full ml-4">
+            <h2 class="text-3xl font-semibold mb-6 text-center">Añadir Canción</h2>
+
+            <form action="/guardar-cancion" method="POST">
+                <!-- Campo para el título de la canción -->
+                <div class="mb-4">
+                    <label for="titulo" class="block text-sm font-medium">Título de la Canción</label>
+                    <input type="text" id="titulo" name="titulo" class="w-full mt-2 p-2 border rounded-md bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Título de la canción">
+                </div>
+
+                <!-- Campo para la duración de la canción -->
+                <div class="mb-4">
+                    <label for="duracion" class="block text-sm font-medium">Duración</label>
+                    <input type="text" id="duracion" name="duracion" class="w-full mt-2 p-2 border rounded-md bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Duración en formato MM:SS">
+                </div>
+
+                <!-- Campo para el enlace de YouTube -->
+                <div class="mb-4">
+                    <label for="youtube" class="block text-sm font-medium">Enlace de YouTube</label>
+                    <input type="url" id="youtube" name="youtube" class="w-full mt-2 p-2 border rounded-md bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="https://youtube.com/enlace-cancion">
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="flex justify-between mt-7">
+                    <!-- Botón para añadir la canción -->
+                    <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-md">Añadir Canción</button>
+
+                    <!-- Botón para cancelar, redirecciona a la vista del álbum -->
+                    <a href="/album-vista" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-md">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

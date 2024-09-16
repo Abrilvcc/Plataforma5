@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EditAlbum.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <a href="index.html" class="title-link">
+    <h1 class="bg-black text-white text-4xl font-bold px-6 py-2 mx-auto rounded-lg w-max">Oasis</h1>
+</a>
+
+   
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="user-info">
+            <img src="liamandnoel.jpg" alt="Ícono de la banda">
+            <h2>LiamAndNoel</h2>
+        </div>
+
+        <!-- Secciones de la sidebar -->
+        <div class="section">
+            <div>
+                <a href="index.html">Other Albums</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div>
+                <a href="EditAlbum.html">Edit Album</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div>
+                <a href="AddSongs.html">Add Songs</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div>
+                <a href="Login.html">Log out</a>
+            </div>
+        </div>
+    </div>
+
+
+    <body class="bg-black-900 text-white">
+
+        <div class="container mx-auto p-8">
+          <!-- Formulario de Edición del Álbum -->
+          <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+            <h2 class="text-3xl font-semibold mb-6 text-center">Editar Álbum</h2>
+      
+            <!-- Formulario -->
+            <form action="/guardar-cambios" method="POST">
+              <!-- Campo para editar el título del álbum -->
+              <div class="mb-4">
+                <label for="titulo" class="block text-sm font-medium">Título del Álbum</label>
+                <input type="text" id="titulo" name="titulo" class="w-full mt-2 p-2 border rounded-md bg-fuchsia-900 focus:outline-none focus:ring-2 focus:ring-blue-500" value="Título actual del álbum">
+              </div>
+      
+              <!-- Campo para editar la descripción -->
+              <div class="mb-4">
+                <label for="descripcion" class="block text-sm font-medium">Descripción</label>
+                <textarea id="descripcion" name="descripcion" rows="4" class="w-full mt-2 p-2 border rounded-md bg-fuchsia-900 focus:outline-none focus:ring-2 focus:ring-blue-500">Descripción actual del álbum</textarea>
+              </div>
+      
+              <!-- Campo para cambiar la URL de la imagen de portada -->
+              <div class="mb-4">
+                <label for="imagen" class="block text-sm font-medium">URL de la Imagen de Portada</label>
+                <input type="text" id="imagen" name="imagen" class="w-full mt-2 p-2 border rounded-md bg-fuchsia-900 focus:outline-none focus:ring-2 focus:ring-blue-500" value="https://url-imagen-actual.jpg">
+              </div>
+      
+              <!-- Botones de Acción -->
+              <div class="flex justify-between mt-6">
+                <!-- Botón para editar -->
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Editar</button>
+      
+                <!-- Botón para cancelar, redirecciona a la vista del álbum -->
+                <a href="OtherAlbums.html" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md">Cancelar</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+</body>
+</html>
