@@ -49,7 +49,7 @@ body {
 }
 
 .sidebar a:hover {
-  background-color:rgba(111, 7, 99, 1)
+  background-color:rgba(149, 40, 136, 0.408)
 }
 
 .main-content {
@@ -57,7 +57,7 @@ body {
   padding: 20px;
 }
 
-  
+.custom-bg {background-color: rgb(111, 7, 99);} 
 
 
  

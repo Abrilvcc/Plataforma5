@@ -5,26 +5,26 @@ body {
   padding: 0;
 }
 
-/* Contenedor principal */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
 }
 
-/* Sidebar en la izquierda */
+
 .sidebar {
   width: 250px;
-  background-color: rgba(149, 40, 136, 0.408); /* Color de fondo personalizado */
+  background-color: rgba(149, 40, 136, 0.408); 
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  min-height: 400px; /* Ajusta la altura mínima según tus necesidades */
-  position: absolute; /* Fija la sidebar a la izquierda */
+  min-height: 400px; 
+  position: absolute; 
   top: 0;
   left: 0;
-  border-radius: 0 20px 20px 0; /* Bordes redondeados en el lado derecho */
-  overflow: auto; /* Agrega scroll si el contenido excede la altura */
+  border-radius: 0 20px 20px 0; 
+  overflow: auto; 
 }
 
 .sidebar a {
@@ -40,22 +40,22 @@ body {
   background-color: rgba(111, 7, 99, 0.408); /* Cambio de color en hover */
 }
 
-/* Contenido principal */
+
 .main-content {
-  margin-left: 270px; /* Asegura que el contenido no esté detrás de la sidebar */
+  margin-left: 270px; 
   padding: 20px;
 }
 
-/* Encabezado principal */
+
 h1 {
   text-align: center;
-  font-size: 3rem; /* Cambié el tamaño para que sea más razonable */
+  font-size: 3rem; 
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Información de la banda */
+
 h3 {
   color: beige;
   background-color: rgba(111, 7, 99, 0.408);
@@ -63,11 +63,11 @@ h3 {
   border-radius: 30px;
   padding: 10px;
   width: 80%;
-  margin: 0 auto; /* Asegúrate de que el margen vertical sea 0 */
-  margin-bottom: 20px; /* Espacio específico para controlar la separación */
+  margin: 0 auto; 
+  margin-bottom: 20px; 
 }
 
-/* Encabezado de álbumes */
+
 h4 {
   text-align: center;
   color: beige;
@@ -75,7 +75,7 @@ h4 {
   margin-top: 20px;
 }
 
-/* Estilo para el contenedor de canciones */
+
 .canciones {
   text-align: center;
   color: beige;
@@ -83,10 +83,10 @@ h4 {
   border-radius: 30px;
   padding: 10px;
   width: 200px;
-  position: absolute; /* Fijo en la pantalla */
-  top: 80px; /* Ajusta la distancia desde la parte superior */
-  right: 20px; /* Ajusta la distancia desde el borde derecho */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: absolute; 
+  top: 80px; 
+  right: 20px; 
+  z-index: 1000; 
 }
 
 .canciones button {
@@ -97,7 +97,7 @@ h4 {
   border-radius: 5px;
   cursor: pointer;
 }
-/* Estilos del contenedor de los álbumes */
+
 .albums {
   display: flex;
   gap: 20px;
@@ -106,7 +106,7 @@ h4 {
   margin: 0 auto;
 }
 
-/* Estilos de cada álbum */
+
 .album {
   background-color: rgba(149, 40, 136, 0.408);
   border-radius: 8px;
@@ -115,7 +115,7 @@ h4 {
   padding: 10px;
   transition: background-color 0.3s;
   margin: 10px;
-  width: 250px; /* Ancho fijo para cada álbum */
+  width: 250px; 
 }
 
 .album img {
@@ -185,6 +185,12 @@ h4 {
 }
 
 .action-buttons button:active {
-  transform: scale(0.98); /* Hace un pequeño efecto de clic */
+  transform: scale(0.98); 
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 

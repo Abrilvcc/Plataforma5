@@ -14,7 +14,7 @@
 
 <body>
  <!-- Span donde se mostrará el mensaje personalizado -->
-  <p id="welcome-message">Bienvenido a nuestra página de tours. Por favor, ingresa tu nombre:</p>
+  <p id="welcome-message" style="color:white">Bienvenido a nuestra página de tours. Por favor, ingresa tu nombre:</p>
   <span id="welcome"></span>
 
   <!-- Script para preguntar nombre y edad, y mostrar un mensaje personalizado -->
@@ -23,40 +23,50 @@
     function pedirNombre() {
       let nombre;
       
-      // Repetir hasta obtener una entrada válida
+      
       while (true) {
         nombre = prompt("Por favor, ingresa tu nombre:");
         
-        // Si el usuario cancela el prompt, salir de la función
+       
         if (nombre === null) return;
 
-        // Verificar que el nombre no está vacío
+        
         if (nombre.trim() === "") {
           alert("Debes completar tu nombre.");
         } 
-        // Verificar que el nombre tiene al menos 2 letras
+        
         else if (nombre.length < 2) {
           alert("El nombre debe tener al menos 2 letras.");
         } 
-        // Salir del bucle si la entrada es válida
+        
         else {
           break;
         }
       }
 
-      // Mostrar el mensaje de bienvenida en el span
+    
       const welcomeSpan = document.getElementById("welcome");
-      welcomeSpan.textContent = `Hola, ${nombre.toUpperCase()}`;
+      welcomeSpan.textContent = `Hola, ${nombre.toUpperCase()}`; welcomeSpan.style.color= "white";
 
       // Pregunta al usuario su edad
       const edad = prompt("¿Cuántos años tienes?");
 
-      // Muestra un mensaje con el nombre y la edad
+     
       alert(`Hola ${nombre}, de ${edad} años, te interesaría adquirir tickets para ver a Oasis? 🎟️`);
     }
 
-    // Llamar a la función cuando se carga la página
+    
     window.onload = pedirNombre;
+    let nombre = prompt("Cuál es tu nombre?").toUpperCase();
+while (nombre.length < 3) {
+  nombre = prompt(
+    "Mmmm, tu nombre no puede ser tan corto, ingresa al menos 3 letras",
+  ).toUpperCase();
+}
+const span = document.getElementById("welcome");
+span.textContent = `Hola, ${nombre}`;
+const i = document.querySelector("i");
+i.setAttribute("class", "fa fa-ticket");
   </script>
 
  
@@ -81,56 +91,56 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
 
       <!-- Evento 1 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">15 de Octubre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Buenos Aires</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 2 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">22 de Octubre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Rosario</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 3 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">29 de Octubre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Madrid</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 4 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">5 de Noviembre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Barcelona</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 5 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">12 de Noviembre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Paris</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 6 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">19 de Noviembre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Montevideo</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 7 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">26 de Noviembre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: Lima</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
       </div>
 
       <!-- Evento 8 -->
-      <div class="bg-fuchsia-950 p-6 rounded-lg shadow-lg text-center">
+      <div class="custom-bg p-6 rounded-lg shadow-lg text-center">
           <h2 class="text-2xl font-semibold mb-2">3 de Diciembre, 2024</h2>
           <p class="text-gray-400 mb-4">Ciudad: La Paz</p>
           <a href="#" class="bg-purple-600 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded">Adquirir Tickets</a>
@@ -155,7 +165,7 @@
                 </ul>
             </div>
   
-            <!-- Elsewhere -->
+            <!-- mas -->
             <div>
                 <h4 class="text-xl font-bold mb-2">Elsewhere:</h4>
                 <ul>
